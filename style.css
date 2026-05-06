@@ -1,36 +1,45 @@
-/* Make the main bar container invisible */
+/* Reset global styling */
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
 window#waybar {
     background-color: transparent;
-}
-
-/* Style applied to every module to create the "Gray Island" look */
-#window,
-#cpu,
-#pulseaudio,
-#clock {
-    background-color: #323232; /* Solid Gray background */
+    border-bottom: 1px solid rgba(100, 114, 125, 0.3);
     color: #ffffff;
-    border-radius: 10px;
-    padding: 2px 15px;
-    margin: 0 5px;
-    /* Optional: add a subtle border to make them pop */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition-property: transparent;
+    transition-duration: .5s;
+    border-radius: 0px;
 }
 
-/* Specific styling for the window module on the left */
-#window {
-    margin-left: 15px;
-    font-weight: bold;
+/* Individual Module Styling */
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
 }
 
-/* Specific styling for the clock on the far right */
+#workspaces button.focused {
+    background-color: #64727D;
+    border-bottom: 2px solid #ffffff;
+}
+
+#custom-mangowm {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+#cpu, #memory, #pulseaudio, #network, #clock {
+    padding: 0 10px;
+    margin: 4px 2px;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle contrast */
+    border-radius: 4px;
+}
+
 #clock {
-    margin-right: 15px;
-}
-
-/* Hover effect for the interactive modules */
-#cpu:hover, 
-#pulseaudio:hover, 
-#clock:hover {
-    background-color: #454545;
+    margin-right: 10px;
+    font-weight: bold;
 }
