@@ -1,0 +1,36 @@
+/* Make the main bar container invisible */
+window#waybar {
+    background-color: transparent;
+}
+
+/* Style applied to every module to create the "Gray Island" look */
+#window,
+#cpu,
+#pulseaudio,
+#clock {
+    background-color: #323232; /* Solid Gray background */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 2px 15px;
+    margin: 0 5px;
+    /* Optional: add a subtle border to make them pop */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Specific styling for the window module on the left */
+#window {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* Specific styling for the clock on the far right */
+#clock {
+    margin-right: 15px;
+}
+
+/* Hover effect for the interactive modules */
+#cpu:hover, 
+#pulseaudio:hover, 
+#clock:hover {
+    background-color: #454545;
+}
